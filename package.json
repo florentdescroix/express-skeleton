@@ -1,0 +1,27 @@
+{
+  "name": "express-skeleton",
+  "version": "1.0.0",
+  "description": "Express application skeleton for educational purpose",
+  "homepage": "https://github.com/florentdescroix/express-skeleton#readme",
+  "bugs": {
+    "url": "https://github.com/florentdescroix/express-skeleton/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/florentdescroix/express-skeleton.git"
+  },
+  "license": "ISC",
+  "author": "Florent Descroix",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --env-file=.env.dev src/index.js",
+    "start": "node --env-file=.env.prod src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mysql2-async": "^2.0.3"
+  }
+}
