@@ -16,7 +16,7 @@ app.use(cors(corsOptions));
 
 app.use("/api", apiRouter);
 
-app.use("/", express.static("public"));
+app.use("/", express.static("./public"));
 
 // Démarage du serveur sur le port défini dans le .env
 // ou sur le port 3000 par défut
