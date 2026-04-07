@@ -1,9 +1,9 @@
-import express from "express";
+import express from "express"
 import cors from "cors"
-import apiRouter from "./app/routes/api.js";
+import apiRouter from "./app/routes/api.js"
 
 // Cration du serveur
-const app = express();
+const app = express()
 
 // Permet de comprendre des body en JSON
 app.use(express.json())
@@ -12,12 +12,17 @@ app.use(express.json())
 const corsOptions = {
     origin: "" // url du front
 }
-app.use(cors(corsOptions));
+app.use(cors(corsOptions))
 
-app.use("/api", apiRouter);
+app.use("/api", apiRouter)
 
-app.use(express.static("./public") );
+app.use(express.static("public") )
+app.get('/', (req, res) => {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')})
+})
 
 // Démarage du serveur sur le port défini dans le .env
 // ou sur le port 3000 par défut
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000)
+
+export default app
